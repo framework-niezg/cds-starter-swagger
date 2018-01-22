@@ -26,7 +26,6 @@ public class Swagger2Configuration extends WebMvcConfigurerAdapter {
     @Bean
     public Docket docket(TypeResolver typeResolver) {
         return new Docket(DocumentationType.SWAGGER_2).select()
-                //.apis(RequestHandlerSelectors.basePackage("com.zjcds.dp.cdm.controller"))
                 .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 .build();
     }
